@@ -189,6 +189,10 @@ img{
   color: rgba(0, 0, 0, 0.3);
 }
 
+.text{
+  overflow: auto;
+}
+
 /* scrittura testo sms */
 .footer-sms{
   padding: 10px 20px;

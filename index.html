@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title></title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -16,45 +16,76 @@
 
       <!-- lista contatti -->
       <aside class="list">
-        <ul>
-          <li>
+          <div class="user">
             <div class="img-user">
               <img src="./img/avatar_io.jpg" alt="">
-              <strong>Nome Utente</strong>
+              <p>Nome Utente</p>
             </div>
             <div class="ico">
               <a href="#"><i class="fas fa-circle-notch"></i></a>
               <a href="#"><i class="fas fa-comment-alt"></i></a>
               <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
-          </li>
-          <li>
+          </div>
 
-          </li>
-        </ul>
-        <!-- <i class="fas fa-search"></i> -->
-        <!-- <i class="fas fa-bell-slash"></i> -->
+          <div class="notifications">
+            <div class="sound">
+              <i class="fas fa-bell-slash"></i>
+            </div>
+            <div class="txt-notifications">
+              <p>Ricevi notifiche di nuovi messaggi</p>
+              <a href="#">Attiva notifiche desktop</a>
+            </div>
+          </div>
+
+          <!-- ricerca chat -->
+          <div class="search">
+            <div class="ico-search">
+              <i class="fas fa-search"></i>
+            </div>
+            <input type="text" name="" placeholder="Cerca o inizia una nuova chat">
+          </div>
+
+          <ul>
+            <li>
+             <img src="./img/avatar_2.jpg" alt="">
+             <p>Michele</p>
+            </li>
+          </ul>
+
       </aside>
 
        <!-- messaggi singolo contatto -->
       <main class="message">
 
+        <!-- info sms user -->
         <section class="head-sms">
-          <img src="./img/avatar_1.jpg" alt="">
-          <!-- info contatti -->
-          <!-- <i class="fas fa-ellipsis-v"></i> -->
-          <!-- <i class="fas fa-search"></i> -->
-          <!-- <i class="fas fa-paperclip"></i> -->
+          <div class="img-sms">
+            <img src="./img/avatar_1.jpg" alt="">
+
+            <div class="info-sms">
+              <p>Michele</p>
+              <p>Ultimo accesso oggi alle 10.35</p>
+            </div>
+          </div>
+
+          <div class="ico-head">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-paperclip"></i></a>
+            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          </div>
         </section>
 
+         <!-- conversazione -->
         <section class="text">
           <!-- conversazione  -->
         </section>
 
+         <!-- scrittura testo sms -->
         <section class="footer-sms">
-          <!-- campo di testo -->
-          <!-- <i class="fas fa-microphone"></i> -->
-          <!-- <i class="far fa-smile"></i> -->
+          <a href="#"><i class="far fa-smile"></i></a>
+          <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+          <a href="#"><i class="fas fa-microphone"></i></a>
         </section>
 
       </main>

@@ -1,0 +1,87 @@
+/* general style */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #009988 0%,
+    #009988 20%,
+    #a8d4e2 20%,
+    #a8d4e2 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* layout */
+.container{
+  width: 80%;
+  height: 94%;
+  background-color: white;
+  display: flex;
+}
+
+.list{
+  flex-basis: 35%;
+}
+
+.message{
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-sms,
+.footer-sms{
+  background-color: red;
+}
+
+.text{
+  flex-grow: 1;
+  background-image: url('../img/mine.jpg');
+}
+
+/* lista contatti */
+img{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-right: 0px;
+}
+
+.img-user{
+  display: flex;
+  align-items: center;
+}
+
+.img-user strong{
+  font-size: 13px;
+}
+
+.ico{
+  display: flex;
+  align-items: center;
+  opacity: .3;
+}
+
+.ico a{
+  padding-right: 20px;
+  color: black;
+}
+
+.list ul li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.list ul li:first-child{
+  background-color: rgba(0,0,0, .1);
+}

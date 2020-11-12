@@ -18,8 +18,8 @@
       <aside class="list">
           <div class="user">
             <div class="img-user">
-              <img src="./img/avatar_io.jpg" alt="">
-              <p>Nome Utente</p>
+              <img :src=" './img/avatar' + user.avatar + '.jpg' " alt="">
+              <p>{{ user.name }}</p>
             </div>
             <div class="ico">
               <a href="#"><i class="fas fa-circle-notch"></i></a>
@@ -47,9 +47,9 @@
           </div>
 
           <ul>
-            <li>
-             <img src="./img/avatar_2.jpg" alt="">
-             <p>Michele</p>
+            <li v-for="(element,index) in contacts">
+             <img :src=" './img/avatar' + contacts.avatar + '.jpg' " alt="">
+             <p>{{ contacts.name }}</p>
             </li>
           </ul>
 
@@ -61,7 +61,7 @@
         <!-- info sms user -->
         <section class="head-sms">
           <div class="img-sms">
-            <img src="./img/avatar_1.jpg" alt="">
+            <img :src=" './img/avatar' + contacts.avatar + '.jpg' " alt="">
 
             <div class="info-sms">
               <p>Michele</p>

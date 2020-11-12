@@ -48,8 +48,8 @@
 
           <ul>
             <li v-for="(element,index) in contacts">
-             <img :src=" './img/avatar' + contacts.avatar + '.jpg' " alt="">
-             <p>{{ contacts.name }}</p>
+             <img :src=" './img/avatar' + element.avatar + '.jpg' " alt="">
+             <p>{{ element.name }}</p>
             </li>
           </ul>
 
@@ -61,10 +61,10 @@
         <!-- info sms user -->
         <section class="head-sms">
           <div class="img-sms">
-            <img :src=" './img/avatar' + contacts.avatar + '.jpg' " alt="">
+            <img :src=" './img/avatar' + contacts[0].avatar + '.jpg' " alt="">
 
             <div class="info-sms">
-              <p>Michele</p>
+              <p>{{ contacts[0].name }}</p>
               <p>Ultimo accesso oggi alle 10.35</p>
             </div>
           </div>

@@ -46,8 +46,10 @@
             <input type="text" name="" placeholder="Cerca o inizia una nuova chat">
           </div>
 
+            <!-- lista contatti -->
           <ul>
-            <li v-for="(element,index) in contacts">
+            <li v-for="(element,index) in contacts"
+                @click="text(index)">
              <img :src=" './img/avatar' + element.avatar + '.jpg' " alt="">
              <p>{{ element.name }}</p>
             </li>
@@ -61,10 +63,10 @@
         <!-- info sms user -->
         <section class="head-sms">
           <div class="img-sms">
-            <img :src=" './img/avatar' + contacts[0].avatar + '.jpg' " alt="">
+            <img :src=" './img/avatar' + contacts[indexContacts].avatar + '.jpg' " alt="">
 
             <div class="info-sms">
-              <p>{{ contacts[0].name }}</p>
+              <p>{{ contacts[indexContacts].name }}</p>
               <p>Ultimo accesso oggi alle 10.35</p>
             </div>
           </div>
@@ -78,7 +80,42 @@
 
          <!-- conversazione -->
         <section class="text">
-          <!-- conversazione  -->
+
+          <ul>
+            <li>
+
+              <!-- ricevuti -->
+              <div class="received">
+
+                <!-- contenuto messaggio -->
+                <div class="sms">
+                  <p>ahahahahaah</p>
+                </div>
+
+                <!-- data messaggio -->
+                <div class="data">
+                  <p>data</p>
+                </div>
+              </div>
+
+
+              <!-- inviati -->
+              <div class="sent">
+
+                <!-- contenuto messaggio -->
+                <div class="sms">
+                  <p>ahahahadsdasdasdasdasas</p>
+                </div>
+
+                <!-- data messaggio -->
+                <div class="data">
+                  <p>data</p>
+                </div>
+
+              </div>
+            </li>
+          </ul>
+
         </section>
 
          <!-- scrittura testo sms -->

@@ -81,43 +81,16 @@
          <!-- conversazione -->
         <section class="text">
 
-          <ul>
-            <li v-for="element in contacts[indexContacts].messages">
-
-              <!-- ricevuti -->
-              <div class="received">
-
+            <div class="container-text"
+                 v-for="element in contacts[indexContacts].messages"
+                 :class="element.status == 'received' ? 'dx' : 'sx'">
                 <!-- contenuto messaggio -->
                 <div class="sms"
-                  :class="element.status == 'sent' ? 'received' : 'sent'">
+                  :class="element.status == 'received' ? 'received' : 'sent'">
                   <p>{{  element.message }}</p>
-                </div>
-
-                <!-- data messaggio -->
-                <div class="data"
-                  :class="element.status == 'sent' ? 'received' : 'sent'">
                   <p>{{ element.date }}</p>
                 </div>
-              </div>
-
-
-              <!-- inviati -->
-              <div class="sent">
-
-                <!-- contenuto messaggio -->
-                <div class="sms">
-                  <p>ahahahadsdasdasdasdasas</p>
-                </div>
-
-                <!-- data messaggio -->
-                <div class="data">
-                  <p>data</p>
-                </div>
-
-              </div>
-            </li>
-          </ul>
-
+            </div>
         </section>
 
          <!-- scrittura testo sms -->

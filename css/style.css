@@ -198,14 +198,18 @@ img{
   padding: 50px;
 }
 
-.text ul li{
+.container-text{
   display: flex;
-  justify-content: space-between;
 }
 
-.received,
-.sent{
-  border-radius: 10px;
+.sx{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dx{
+  display: flex;
+  justify-content: flex-start;
 }
 
 .sent{
@@ -216,9 +220,10 @@ img{
   background-color: white;
 }
 
-.data{
-  display: flex;
-  justify-content: flex-end;
+.sms{
+  width: 45%;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .sms p{
@@ -227,10 +232,11 @@ img{
   padding-bottom: 0px;
 }
 
-.data p{
+.sms p:last-child{
   font-size: 10px;
   padding: 3px;
   opacity: .5;
+  text-align: right;
 }
 
 /* scrittura testo sms */

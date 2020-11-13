@@ -82,19 +82,19 @@
         <section class="text">
 
           <ul>
-            <li>
+            <li v-for="element in contacts[indexContacts].messages">
 
               <!-- ricevuti -->
               <div class="received">
 
                 <!-- contenuto messaggio -->
                 <div class="sms">
-                  <p>ahahahahaah</p>
+                  <p>{{  element.message }}</p>
                 </div>
 
                 <!-- data messaggio -->
                 <div class="data">
-                  <p>data</p>
+                  <p>{{ element.data }}</p>
                 </div>
               </div>
 

@@ -88,13 +88,15 @@
               <div class="received">
 
                 <!-- contenuto messaggio -->
-                <div class="sms">
+                <div class="sms"
+                  :class="element.status == 'sent' ? 'received' : 'sent'">
                   <p>{{  element.message }}</p>
                 </div>
 
                 <!-- data messaggio -->
-                <div class="data">
-                  <p>{{ element.data }}</p>
+                <div class="data"
+                  :class="element.status == 'sent' ? 'received' : 'sent'">
+                  <p>{{ element.date }}</p>
                 </div>
               </div>
 

@@ -102,6 +102,9 @@ var app = new Vue({
     methods: {
       text(index){
         this.indexContacts = index;
-      }
-    }
+      },
+      removeSms(indexMessage){
+      this.contacts[this.indexContacts].messages.splice(indexMessage,1);
+      },
+    },
 });

@@ -82,13 +82,15 @@
         <section class="text">
 
             <div class="container-text"
-                 v-for="element in contacts[indexContacts].messages"
+                 v-for="(element,indexMessage) in contacts[indexContacts].messages"
                  :class="element.status == 'received' ? 'dx' : 'sx'">
                 <!-- contenuto messaggio -->
                 <div class="sms"
                   :class="element.status == 'received' ? 'received' : 'sent'">
                   <p>{{  element.message }}</p>
-                  <p>{{ element.date }}</p>
+                  <p id="data">{{ element.date }}</p>
+                  <i class="fas fa-times fa-xs"
+                     @click="removeSms(indexMessage)"></i>
                 </div>
             </div>
         </section>
@@ -96,7 +98,7 @@
          <!-- scrittura testo sms -->
         <section class="footer-sms">
           <a href="#"><i class="far fa-smile"></i></a>
-          <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+          <input type="text" name="" placeholder="Scrivi un messaggio">
           <a href="#"><i class="fas fa-microphone"></i></a>
         </section>
 

@@ -11,6 +11,12 @@ var app = new Vue({
         // riferimento messaggio input
         messageText:"",
 
+        // riferimento data e ora sms
+        timeData: dayjs().format("DD/MM/YYYY hh:mm:ss a"),
+
+
+        timeData1S: dayjs().add(1, 's').format("DD/MM/YYYY hh:mm:ss a"),
+
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -115,14 +121,12 @@ var app = new Vue({
       this.contacts[this.indexContacts].messages.splice(indexMessage,1);
       },
 
-      // push message nell'oggetto
-
       // push oggetto per singola conversazione
       pushObj(){
         if (this.messageText.trim() !== "") {
 
           this.contacts[this.indexContacts].messages.push({
-            date:"10/01/2020 15:30:55",
+            date: this.timeData,
             message: this.messageText.trim(),
             status: "sent",
           });
@@ -130,7 +134,7 @@ var app = new Vue({
           setTimeout( () => {
 
             this.contacts[this.indexContacts].messages.push({
-              date: '10/01/2020 15:30:56',
+              date: this.timeData1S,
               message: 'ok',
               status: 'received',
             });
@@ -141,6 +145,10 @@ var app = new Vue({
         }
 
       },
+
+      // dateTime(){
+      //   dayjs().add(1, 's').format("DD/MM/YYYY hh:mm:ss a");
+      // }
 
     },
 });

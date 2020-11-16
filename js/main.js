@@ -33,7 +33,7 @@ var app = new Vue({
                         date: '10/01/2020 16:15:22',
                         message: 'Tutto fatto!',
                         status: 'received'
-                    }
+                    },
                 ],
             },
             {
@@ -55,7 +55,7 @@ var app = new Vue({
                         date: '20/03/2020 16:35:00',
                         message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                         status: 'received'
-                    }
+                    },
                 ],
             },
             {
@@ -77,7 +77,7 @@ var app = new Vue({
                         date: '28/03/2020 16:15:22',
                         message: 'Ah scusa!',
                         status: 'received'
-                    }
+                    },
                 ],
             },
             {
@@ -94,17 +94,40 @@ var app = new Vue({
                         date: '10/01/2020 15:50:00',
                         message: 'Si, ma preferirei andare al cinema',
                         status: 'received'
-                    }
+                    },
                 ],
             },
-        ]
+        ],
     },
     methods: {
+
+      // indice array per conversazioni
       text(index){
         this.indexContacts = index;
       },
+
+      // rimozione messaggi
       removeSms(indexMessage){
       this.contacts[this.indexContacts].messages.splice(indexMessage,1);
       },
+
+      // push oggetto per singola conversazione
+      pushObj(){
+        if (this.contacts[this.indexContacts].messages.message !== "") {
+          this.contacts[this.indexContacts].messages.push({
+            date:"10/01/2020 15:30:55",
+            message:"",
+            status: "sent",
+          });
+
+          this.contacts[this.indexContacts].messages.push({
+            date: '10/01/2020 15:30:56',
+            message: 'ok',
+            status: 'received',
+          });
+        }
+
+      },
+
     },
 });

@@ -98,7 +98,9 @@
          <!-- scrittura testo sms -->
         <section class="footer-sms">
           <a href="#"><i class="far fa-smile"></i></a>
-          <input type="text" name="" placeholder="Scrivi un messaggio">
+          <input type="text" name=""
+                 @keyup.enter="pushObj"
+                 placeholder="Scrivi un messaggio">
           <a href="#"><i class="fas fa-microphone"></i></a>
         </section>
 

@@ -5,7 +5,11 @@ var app = new Vue({
     el: '#app',
     data: {
 
+        // riferimento indice array
         indexContacts: 0,
+
+        // riferimento messaggio input
+        messageText:"",
 
         // nostro account
         user: {
@@ -111,20 +115,29 @@ var app = new Vue({
       this.contacts[this.indexContacts].messages.splice(indexMessage,1);
       },
 
+      // push message nell'oggetto
+
       // push oggetto per singola conversazione
       pushObj(){
-        if (this.contacts[this.indexContacts].messages.message !== "") {
+        if (this.messageText.trim() !== "") {
+
           this.contacts[this.indexContacts].messages.push({
             date:"10/01/2020 15:30:55",
-            message:"",
+            message: this.messageText.trim(),
             status: "sent",
           });
 
-          this.contacts[this.indexContacts].messages.push({
-            date: '10/01/2020 15:30:56',
-            message: 'ok',
-            status: 'received',
-          });
+          setTimeout( () => {
+
+            this.contacts[this.indexContacts].messages.push({
+              date: '10/01/2020 15:30:56',
+              message: 'ok',
+              status: 'received',
+            });
+
+          }, 1000);
+
+          this.messageText="";
         }
 
       },

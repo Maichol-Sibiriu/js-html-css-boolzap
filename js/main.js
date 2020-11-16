@@ -1,6 +1,7 @@
 /**
  * Boolzapp Vue
  */
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -12,10 +13,10 @@ var app = new Vue({
         messageText:"",
 
         // riferimento data e ora sms
-        timeData: dayjs().format("DD/MM/YYYY hh:mm:ss a"),
+        timeData: dayjs().locale("it").format("DD/MM/YYYY HH:mm:ss"),
 
-
-        timeData1S: dayjs().add(1, 's').format("DD/MM/YYYY hh:mm:ss a"),
+        // riferimento con il +1 dei secondi
+        timeData1S: dayjs().locale("it").add(1, 's').format("DD/MM/YYYY HH:mm:ss"),
 
         // nostro account
         user: {
@@ -145,10 +146,6 @@ var app = new Vue({
         }
 
       },
-
-      // dateTime(){
-      //   dayjs().add(1, 's').format("DD/MM/YYYY hh:mm:ss a");
-      // }
 
     },
 });

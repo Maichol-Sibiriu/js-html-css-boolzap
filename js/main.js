@@ -18,6 +18,9 @@ var app = new Vue({
         // riferimento con il +1 dei secondi
         timeData1S: dayjs().locale("it").add(1, 's').format("DD/MM/YYYY HH:mm:ss"),
 
+        // riferimento per ricerca contatti
+        search:"",
+
         // nostro account
         user: {
             name: 'Nome Utente',
@@ -145,6 +148,14 @@ var app = new Vue({
           this.messageText="";
         }
 
+      },
+
+      // ricerca contatto con keyboard
+      serchContact(){
+        if (this.search.trim() !== "") {
+          
+           this.search.trim().includes(this.contacts[this.indexContacts].name);
+        }
       },
 
     },

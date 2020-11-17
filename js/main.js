@@ -153,23 +153,14 @@ var app = new Vue({
       // ricerca contatto con keyboard
       serchContact(){
 
-        this.contacts.forEach( () => {
+        this.contacts.forEach( (element) => {
 
-           const nameObj = this.contacts[this.indexContacts].name.toLowerCase()
+            if (element.name.toLowerCase().includes(this.search.trim().toLowerCase()) == true) {
 
-            if (this.search.trim() !== "") {
-
-             this.search.trim().includes(this.nameObj);
-            }
-
-           let searchLetter = this.contacts[this.indexContacts].visible
-
-            if (this.search.trim().includes(this.nameObj) == true) {
-
-             searchLetter = true;
+             element.visible = true;
             }
             else {
-             searchLetter = false;
+             element.visible = false;
             }
 
         });

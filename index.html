@@ -53,7 +53,8 @@
           <ul>
             <li v-for="(element,index) in contacts"
                 @click="text(index)"
-                :class="index == indexContacts ? 'active' : null">
+                :class="index == indexContacts ? 'active' : null"
+                v-show="element.visible == true">
              <img :src=" './img/avatar' + element.avatar + '.jpg' " alt="">
              <p>{{ element.name }}</p>
             </li>

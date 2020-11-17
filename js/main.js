@@ -152,10 +152,29 @@ var app = new Vue({
 
       // ricerca contatto con keyboard
       serchContact(){
-        if (this.search.trim() !== "") {
-          
-           this.search.trim().includes(this.contacts[this.indexContacts].name);
-        }
+
+        this.contacts.forEach( () => {
+
+           const nameObj = this.contacts[this.indexContacts].name.toLowerCase()
+
+            if (this.search.trim() !== "") {
+
+             this.search.trim().includes(this.nameObj);
+            }
+
+           let searchLetter = this.contacts[this.indexContacts].visible
+
+            if (this.search.trim().includes(this.nameObj) == true) {
+
+             searchLetter = true;
+            }
+            else {
+             searchLetter = false;
+            }
+
+        });
+
+
       },
 
     },

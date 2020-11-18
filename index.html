@@ -9,37 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body class="d-f j-c-c a-i-c">
 
      <!-- clone whats app -->
-    <div id="app" class="container">
+    <div id="app" class="container d-f">
 
       <!-- lista contatti -->
       <aside class="list">
-          <div class="user">
-            <div class="img-user">
+          <div class="user d-f">
+            <div class="img-user d-f a-i-c">
               <img :src=" './img/avatar' + user.avatar + '.jpg' " alt="">
               <p>{{ user.name }}</p>
             </div>
-            <div class="ico">
+            <div class="ico d-f a-i-c">
               <a href="#"><i class="fas fa-circle-notch"></i></a>
               <a href="#"><i class="fas fa-comment-alt"></i></a>
               <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
           </div>
 
-          <div class="notifications">
-            <div class="sound">
+          <div class="notifications d-f">
+            <div class="sound d-f j-c-c a-i-c">
               <i class="fas fa-bell-slash"></i>
             </div>
-            <div class="txt-notifications">
+            <div class="txt-notifications d-f j-c-c">
               <p>Ricevi notifiche di nuovi messaggi</p>
               <a href="#">Attiva notifiche desktop</a>
             </div>
           </div>
 
           <!-- ricerca chat -->
-          <div class="search">
+          <div class="search d-f">
             <div class="ico-search">
               <i class="fas fa-search"></i>
             </div>
@@ -51,7 +51,8 @@
 
             <!-- lista contatti -->
           <ul>
-            <li v-for="(element,index) in contacts"
+            <li class="d-f a-i-c"
+                v-for="(element,index) in contacts"
                 @click="text(index)"
                 :class="index == indexContacts ? 'active' : null"
                 v-show="element.visible == true">
@@ -63,20 +64,20 @@
       </aside>
 
        <!-- messaggi singolo contatto -->
-      <main class="message">
+      <main class="message d-f">
 
         <!-- info sms user -->
-        <section class="head-sms">
-          <div class="img-sms">
+        <section class="head-sms d-f a-i-c">
+          <div class="img-sms d-f">
             <img :src=" './img/avatar' + contacts[indexContacts].avatar + '.jpg' " alt="">
 
-            <div class="info-sms">
+            <div class="info-sms d-f j-c-c">
               <p>{{ contacts[indexContacts].name }}</p>
               <p>Ultimo accesso oggi alle 10.35</p>
             </div>
           </div>
 
-          <div class="ico-head">
+          <div class="ico-head d-f">
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="#"><i class="fas fa-paperclip"></i></a>
             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
@@ -86,9 +87,9 @@
          <!-- conversazione -->
         <section class="text">
 
-            <div class="container-text"
+            <div class="container-text d-f"
                  v-for="(element,indexMessage) in contacts[indexContacts].messages"
-                 :class="element.status == 'received' ? 'dx' : 'sx'">
+                 :class="element.status == 'received' ? 'sx' : 'dx'">
                 <!-- contenuto messaggio -->
                 <div class="sms"
                   :class="element.status == 'received' ? 'received' : 'sent'">
